@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batalha Naval - Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pagina-jogo">
+  <div class="container-jogo">
+    <header class="topo">
+      <h1>Batalha Naval</h1>
+      <button id="reiniciar" class="botao-secundario">Nova Partida</button>
+    </header>
+
+    <section class="painel-info">
+      <div id="placar-j1" class="card-info jogador-card">
+        <h2 id="nome-j1">Jogador 1</h2>
+        <p>Acertos: <span id="pontos-j1">0</span></p>
+        <p>Navios restantes: <span id="restantes-j1">0</span></p>
+      </div>
+
+      <div class="card-info centro-card">
+        <h2>Vez de</h2>
+        <p id="turno-atual" class="turno-destaque">Jogador 1</p>
+        <p id="mensagem-jogo">Clique em uma posição do tabuleiro inimigo.</p>
+      </div>
+
+      <div id="placar-j2" class="card-info jogador-card">
+        <h2 id="nome-j2">Jogador 2</h2>
+        <p>Acertos: <span id="pontos-j2">0</span></p>
+        <p>Navios restantes: <span id="restantes-j2">0</span></p>
+      </div>
+    </section>
+
+    <section class="area-tabuleiros">
+      <div class="tabuleiro-box">
+        <h3>Tabuleiro de ataque de <span id="titulo-ataque-j1">Jogador 1</span></h3>
+        <div id="tabuleiro-j1-ataque" class="tabuleiro"></div>
+      </div>
+
+      <div class="tabuleiro-box">
+        <h3>Tabuleiro de ataque de <span id="titulo-ataque-j2">Jogador 2</span></h3>
+        <div id="tabuleiro-j2-ataque" class="tabuleiro"></div>
+      </div>
+    </section>
+
+    <section class="painel-dados">
+      <div class="bloco-dados">
+        <h3>Histórico de Jogadas</h3>
+        <ul id="historico" class="lista-historico"></ul>
+      </div>
+
+      <div class="bloco-dados">
+        <h3>Resumo da Partida</h3>
+        <table class="tabela-resumo">
+          <thead>
+            <tr>
+              <th>Jogador</th>
+              <th>Acertos</th>
+              <th>Erros</th>
+              <th>Jogadas</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script-jogo.js"></script>
+</body>
+</html>

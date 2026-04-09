@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batalha Naval - Início</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pagina-inicial">
+  <div class="container">
+    <div class="card">
+      <h1>Batalha Naval</h1>
+      <p class="subtitulo">Configure os jogadores para iniciar a partida</p>
+
+      <form id="form-jogadores" class="formulario">
+        <div class="campo">
+          <label for="jogador1">Nome do Jogador 1</label>
+          <input type="text" id="jogador1" maxlength="20" placeholder="Digite o nome do jogador 1" required />
+        </div>
+
+        <div class="campo">
+          <label for="jogador2">Nome do Jogador 2</label>
+          <input type="text" id="jogador2" maxlength="20" placeholder="Digite o nome do jogador 2" required />
+        </div>
+
+        <button type="submit" class="botao-principal">Iniciar Jogo</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script-index.js"></script>
+</body>
+</html>
