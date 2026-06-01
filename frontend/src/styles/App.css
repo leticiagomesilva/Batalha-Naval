@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071c2f, #0d3b66);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#root {
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* ── Landing Page ─────────────────────────── */
+
+.pagina-inicial {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #d7ebff;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: bold;
+}
+
+.campo input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.botao-principal,
+.botao-secundario {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 1rem;
+}
+
+.botao-principal {
+  background-color: #00c2ff;
+  color: #062033;
+}
+
+.botao-secundario {
+  background-color: #ffcc00;
+  color: #222;
+}
+
+.botao-principal:hover,
+.botao-secundario:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.botao-link {
+  background: none;
+  border: none;
+  color: #a0cfff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+.botao-link:hover {
+  color: #ffffff;
+}
+
+.botoes-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Código da partida */
+.codigo-partida {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.codigo-destaque {
+  display: block;
+  font-size: 2.5rem;
+  letter-spacing: 0.3em;
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+.hint {
+  text-align: center;
+  color: #a0cfff;
+  font-size: 0.9rem;
+}
+
+/* ── Game Page ───────────────────────────── */
+
+.container-jogo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.painel-info {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card-info {
+  flex: 1;
+  min-width: 220px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, border 0.2s;
+}
+
+.card-info h2 {
+  margin-bottom: 10px;
+}
+
+.turno-destaque {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.mensagem-jogo {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #d7ebff;
+}
+
+.mensagem-erro {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sua-vez-hint {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #a0cfff;
+}
+
+.jogador-ativo {
+  border: 3px solid #00ffbf;
+  transform: scale(1.02);
+}
+
+/* ── Tabuleiros ──────────────────────────── */
+
+.area-tabuleiros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tabuleiro-box {
+  flex: 1;
+  min-width: 320px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.tabuleiro-box h3 {
+  margin-bottom: 15px;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 8px;
+  justify-content: center;
+}
+
+.celula {
+  width: 60px;
+  height: 60px;
+  background-color: #b7dcff;
+  border: 2px solid #083b63;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.celula:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+
+.celula.navio {
+  background-color: #1e3a5f;
+  border-color: #00c2ff;
+}
+
+.celula.agua {
+  background-color: #3b82f6;
+  animation: splash 0.4s ease;
+}
+
+.celula.acerto {
+  background-color: #ef4444;
+  animation: explosao 0.4s ease;
+}
+
+.celula.bloqueada {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@keyframes splash {
+  0% { transform: scale(0.6); }
+  100% { transform: scale(1); }
+}
+
+@keyframes explosao {
+  0% { transform: scale(0.6) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(8deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ── Painel de dados ─────────────────────── */
+
+.painel-dados {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bloco-dados {
+  flex: 1;
+  min-width: 320px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.bloco-dados h3 {
+  margin-bottom: 12px;
+}
+
+.lista-historico {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.lista-historico li {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.tabela-resumo {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-resumo th,
+.tabela-resumo td {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 10px;
+  text-align: center;
+}
+
+.tabela-resumo th {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ── Responsivo ──────────────────────────── */
+
+@media (max-width: 768px) {
+  .tabuleiro {
+    grid-template-columns: repeat(5, 48px);
+  }
+
+  .celula {
+    width: 48px;
+    height: 48px;
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
