@@ -10,7 +10,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173',
+    origin: '*',
     methods: ['GET', 'POST'],
   },
 });
@@ -107,6 +107,6 @@ io.on('connection', (socket) => {
 });
 
 const PORT = 3001;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor Batalha Naval rodando na porta ${PORT}`);
 });

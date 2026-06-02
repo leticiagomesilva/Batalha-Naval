@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { io } from 'socket.io-client';
 
-const SERVIDOR_URL = 'http://localhost:3001';
+const SERVIDOR_URL = 'http://172.26.119.220:3001';
 
 export function useSocket(onEvento) {
   const socketRef = useRef(null);
